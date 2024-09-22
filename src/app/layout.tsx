@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Alata } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const alata = Alata({ subsets: ["latin"], weight: "400" });
 
@@ -19,7 +21,9 @@ export default function RootLayout({
       <body
         className={`${alata.className} flex min-h-screen flex-col scroll-smooth antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

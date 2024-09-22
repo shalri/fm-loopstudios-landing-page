@@ -7,8 +7,8 @@
 :root {
   --dark-gray: hsl(0, 0%, 55%);
   --very-dark-gray: hsl(0, 0%, 55%);
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff; */
+  /* --foreground: #171717; */
   --font-base: 15px;
 
   /* Font Variables */
@@ -26,8 +26,8 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  /* color: var(--foreground); */
+  /* background: var(--background); */
   font-family: var(--body);
   font-size: var(--font-base);
   font-weight: var(--body-weight);
@@ -42,6 +42,7 @@ h3,
 h4,
 h5,
 h6 {
+  text-transform: uppercase;
   font-family: var(--heading);
   font-weight: var(--heading-weight);
 }

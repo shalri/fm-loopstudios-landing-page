@@ -7,7 +7,7 @@ export default function Header() {
       <div className="flex items-end justify-between px-6">
         <div className="">
           <Link href="/" className="" aria-label="home">
-            <div className="h-[1.6rem] w-[9.6rem] bg-[url(/images/logo.svg)] bg-contain" />
+            <div className="h-[1.5rem] w-[9.5rem] bg-[url(/images/logo.svg)] bg-contain bg-no-repeat" />
           </Link>
         </div>
         <nav className="">

@@ -9,8 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "ls-dark-gray": "var(--dark-gray)",
+        "ls-very-dark-gray": "var(--very-dark-gray)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        body: ["var(--body)"],
+        heading: ["var(--heading)"],
       },
     },
   },

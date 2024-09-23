@@ -1,5 +1,6 @@
 import { navLinks, socialLinks } from "@/libs/data";
 import Link from "next/link";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
@@ -20,15 +21,11 @@ export default function Footer() {
           </ul>
         </nav>
         <div className="">
-          {/* TODO: use react-icons */}
-          <ul className="">
-            {socialLinks.map((link) => (
-              <li className="" key={link.label}>
-                <a href={link.href} className="">
-                  {link.label}
-                </a>
-              </li>
-            ))}
+          <ul className="flex">
+            <SocialLinks
+              links={socialLinks}
+              className="items-center justify-center"
+            />
           </ul>
         </div>
         <div className="">

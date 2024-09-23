@@ -8,13 +8,15 @@ export default function Hero() {
           {banner.copy}
         </h1>
       </section>
-      <section className="mt-[5.875rem]">
-        <div className="mx-6 h-[14rem] w-full bg-[url(/images/mobile/image-interactive.jpg)] bg-contain bg-no-repeat" />
+      <section className="mt-[5.875rem] px-6">
+        <div className="h-[14rem] w-full bg-[url(/images/mobile/image-interactive.jpg)] bg-cover bg-no-repeat" />
         <div className="mt-[3.125rem] text-center">
-          <h2 className="text-[2rem] uppercase leading-[0.95]">
-            {hero.heading}
+          <h2 className="text-[2rem] uppercase leading-[0.95] text-black">
+            {hero.heading}{" "}
           </h2>
-          <p className="mt-[1.125rem] px-10 leading-[1.66]">{hero.copy}</p>
+          <p className="mx-auto mt-[1.125rem] max-w-[17.5rem] leading-[1.66] text-ls-very-dark-gray">
+            {hero.copy}
+          </p>
         </div>
       </section>
     </article>

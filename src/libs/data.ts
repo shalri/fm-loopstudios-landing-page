@@ -75,23 +75,23 @@ export const creations = [
 // TDDO: populate icons frm react-icons
 export const socialLinks = [
   {
-    label: "facebook",
+    label: "Facebook",
     href: "#",
-    icon: "",
+    icon: "Facebook",
   },
   {
     label: "Twitter",
     href: "#",
-    icon: "",
+    icon: "Twitter",
   },
   {
     label: "Pinterest",
     href: "#",
-    icon: "",
+    icon: "Pinterest",
   },
   {
     label: "Instagram",
     href: "#",
-    icon: "",
+    icon: "Instagram",
   },
 ];

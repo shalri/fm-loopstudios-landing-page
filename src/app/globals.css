@@ -47,6 +47,12 @@ h6 {
   font-weight: var(--heading-weight);
 }
 
+@media (max-width: 375px) {
+  .small-banner {
+    font-size: clamp(0.8rem, 10.6667vw, 2.5rem);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

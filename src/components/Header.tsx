@@ -5,7 +5,7 @@ import { navLinks } from "@/libs/data";
 import { cn } from "@/libs/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 
 const NavContent = React.memo(function Navcontent({
   handleLinkClink,
@@ -13,7 +13,11 @@ const NavContent = React.memo(function Navcontent({
   handleLinkClink: (e: React.MouseEvent) => void;
 }) {
   return (
-    <ul className="space-y-[1.125rem] pb-[2.125rem] sm:flex sm:content-center sm:gap-x-[2.0579rem] sm:space-y-0 sm:pb-0">
+    <ul
+      className={cn(
+        "space-y-[1.125rem] pb-[2.125rem] sm:flex sm:content-center sm:gap-x-[2.0579rem] sm:space-y-0 sm:pb-0",
+      )}
+    >
       {navLinks.map((link) => (
         <li
           className="underline-hover white-underline font-heading text-2xl uppercase text-ls-dark-gray transition-all duration-300 hover:text-white sm:text-base sm:capitalize sm:text-white"
@@ -29,13 +33,16 @@ const NavContent = React.memo(function Navcontent({
 });
 
 export default function Header() {
+  const [mounted, setMounted] = React.useState(false);
   const isSmallScreen = useSmallScreen();
   const navRef = useRef<HTMLDivElement>(null);
   const { isMobileNavActive, toggleMobileNav, closeMobileNav } = useMobileNav(
     navRef,
     isSmallScreen,
   );
-
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const mobileNavAnimatonWrapper = useCallback(
     (children: React.ReactNode) => {
       return (
@@ -70,15 +77,17 @@ export default function Header() {
             <div className="h-[1.5rem] w-[9.5rem] bg-[url(/images/logo.svg)] bg-contain bg-no-repeat sm:h-[2rem] sm:w-[12rem]" />
           </Link>
         </div>
-        <nav ref={navRef} className="flex">
-          {isSmallScreen ? (
-            mobileNavAnimatonWrapper(
-              <NavContent handleLinkClink={handleLinkClink} />,
-            )
-          ) : (
-            <NavContent handleLinkClink={handleLinkClink} />
-          )}
-        </nav>
+        {mounted && (
+          <nav ref={navRef} className="flex">
+            {isSmallScreen ? (
+              mobileNavAnimatonWrapper(
+                <NavContent handleLinkClink={handleLinkClink} />,
+              )
+            ) : (
+              <NavContent handleLinkClink={handleLinkClink} />
+            )}
+          </nav>
+        )}
         <button
           className={cn(
             "h-[1.4rem] w-[1.5rem] bg-[url(/images/icon-hamburger.svg)] bg-contain bg-no-repeat sm:hidden",

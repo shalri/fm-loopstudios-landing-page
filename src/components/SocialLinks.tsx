@@ -31,7 +31,7 @@ export default function SocialLinks({ links, className }: SocialLinksProps) {
       {links.map(({ label, href, icon }) => {
         const Icon = socialIcons[icon] || AiOutlineFacebook;
         return (
-          <li key={label}>
+          <li key={label} className="underline-hover white-underline">
             <a
               href={href}
               target="_blank"

@@ -14,7 +14,7 @@ export default function Footer() {
         <nav className="mt-9 sm:col-span-1 sm:row-start-2 sm:mr-auto sm:mt-0">
           <ul className="space-y-[18px] text-center sm:mt-0 sm:flex sm:space-x-[2.125rem] sm:space-y-0">
             {navLinks.map((link) => (
-              <li className="" key={link.label}>
+              <li className="underline-hover white-underline" key={link.label}>
                 <Link href={link.href}>{link.label}</Link>
               </li>
             ))}

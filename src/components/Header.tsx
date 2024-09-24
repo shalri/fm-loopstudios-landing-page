@@ -16,7 +16,7 @@ const NavContent = React.memo(function Navcontent({
     <ul className="space-y-[1.125rem] pb-[2.125rem] sm:flex sm:content-center sm:gap-x-[2.0579rem] sm:space-y-0 sm:pb-0">
       {navLinks.map((link) => (
         <li
-          className="font-heading text-2xl uppercase text-ls-dark-gray transition-all duration-300 hover:text-white sm:text-base sm:capitalize sm:text-white"
+          className="underline-hover white-underline font-heading text-2xl uppercase text-ls-dark-gray transition-all duration-300 hover:text-white sm:text-base sm:capitalize sm:text-white"
           key={link.label}
         >
           <Link href={link.href} onClick={handleLinkClink}>

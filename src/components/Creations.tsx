@@ -12,12 +12,12 @@ export default function Creations() {
           See all
         </button>
       </div>
-      <div className="mt-10 flex flex-col gap-y-6 sm:mt-[4.25rem] sm:grid sm:grid-cols-4 sm:gap-[1.850rem]">
+      <div className="mt-10 flex flex-col gap-y-6 sm:mt-[4.25rem] sm:grid sm:grid-cols-[repeat(auto-fill,minmax(240px,1fr))] sm:gap-[1.850rem]">
         {creations.map((creation) => (
           <section
             className={cn(
-              "relative h-[7.5rem] w-full px-6 py-6 sm:col-span-1 sm:h-[450px]",
-              "bg-cover bg-center bg-no-repeat",
+              "flicker-effect group relative h-[7.5rem] w-full px-6 py-6 sm:col-span-1 sm:h-[450px]",
+              "bg-cover bg-top bg-no-repeat",
               "bg-[image:var(--bg-image-mobile)]",
               "sm:bg-[image:var(--bg-image-desktop)]",
             )}
@@ -29,9 +29,10 @@ export default function Creations() {
               } as React.CSSProperties
             }
           >
-            <h2 className="absolute bottom-5 left-5 text-2xl leading-[1] text-white sm:bottom-8 sm:left-10 sm:text-[32px]">
+            <div className="absolute inset-0 transition-opacity duration-500 group-hover:bg-white/50" />
+            <h2 className="absolute bottom-5 left-5 text-2xl leading-[1] text-white transition-colors duration-500 group-hover:text-black sm:bottom-8 sm:left-10 sm:text-[2rem]">
               {creation.heading === "From up above VR" ||
-                creation.heading === "Make it fisheye" ? (
+              creation.heading === "Make it fisheye" ? (
                 <>
                   <span className="block">
                     {creation.heading.split(" ").slice(0, 2).join(" ")}

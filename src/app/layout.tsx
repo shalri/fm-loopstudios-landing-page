@@ -7,8 +7,9 @@ import Footer from "@/components/Footer";
 const alata = Alata({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "きそ(kiso) | FScode",
-  description: "A basic NextJS template for Frontend Mentor Challenges",
+  title: "Loopstudios Landing Page | FScode",
+  description:
+    "Solution for Loopstudios Landing Page challenge from Frontend Mentor",
 };
 
 export default function RootLayout({
@@ -18,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${alata.className} flex min-h-screen flex-col scroll-smooth antialiased`}
-      >
+      <body className={`${alata.className} scroll-smooth antialiased`}>
         <Header />
         {children}
         <Footer />

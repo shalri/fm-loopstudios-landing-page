@@ -11,10 +11,10 @@ export default function Hero() {
         </div>
       </section>
       <section className="mt-[5.875rem] max-w-[72.375rem] px-6 sm:relative sm:mx-auto sm:mt-[10rem]">
-        <div className="h-[14rem] w-full bg-[url(/images/mobile/image-interactive.jpg)] bg-cover bg-no-repeat sm:h-[31.3rem] sm:max-w-[65.8%] sm:bg-[url(/images/desktop/image-interactive.jpg)]" />
+        <div className="h-[14rem] w-full bg-[url(/images/mobile/image-interactive.jpg)] bg-cover bg-top bg-no-repeat sm:h-[31.3rem] sm:max-w-[65.8%] sm:bg-[url(/images/desktop/image-interactive.jpg)]" />
         <div className="mt-[3.125rem] bg-white text-center sm:absolute sm:-bottom-6 sm:right-0 sm:mt-0 sm:w-[48.8%] sm:pl-[96px] sm:pt-[94px] sm:text-left">
-          <h2 className="text-[2rem] uppercase leading-[0.98] text-black sm:mt-1 sm:text-[48px]">
-            {hero.heading}{" "}
+          <h2 className="text-[2rem] uppercase leading-[0.98] text-black sm:mt-1 sm:text-[3rem]">
+            {hero.heading}
           </h2>
           <p className="mx-auto mt-[1.125rem] max-w-[17.5rem] leading-[1.66] text-ls-very-dark-gray sm:mx-0 sm:max-w-full sm:pb-6 sm:pr-5 sm:pt-2 sm:tracking-[0.010em]">
             {hero.copy}
